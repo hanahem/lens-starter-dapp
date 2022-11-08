@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+}
+
+#__next {
+  height: 100%;
+}
+
+body {
+  @apply bg-white dark:bg-coal;
+}

@@ -1,0 +1,13 @@
+#import "._fragments.graphql"
+
+query CurrentUser($ownedBy: [EthereumAddress!]) {
+  profiles(request: { ownedBy: $ownedBy }) {
+    items {
+      ...MinimalProfileFields
+      isDefault
+    }
+  }
+  userSigNonces {
+    lensHubOnChainSigNonce
+  }
+}

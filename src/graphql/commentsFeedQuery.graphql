@@ -1,0 +1,18 @@
+#import "._fragments.graphql"
+
+query CommentsFeed(
+  $request: PublicationsQueryRequest!
+  $reactionRequest: ReactionFieldResolverRequest
+) {
+  publications(request: $request) {
+    items {
+      ... on Comment {
+        ...CommentFields
+      }
+    }
+    pageInfo {
+      totalCount
+      next
+    }
+  }
+}

@@ -1,0 +1,7 @@
+#import "._fragments.graphql"
+
+mutation CreateCommentViaDispatcher($request: CreatePublicCommentRequest!) {
+  createCommentViaDispatcher(request: $request) {
+    ...RelayerResult
+  }
+}
